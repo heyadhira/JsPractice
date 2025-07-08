@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <div>
+        <h2>Todo List</h2>
+        <input type="text" id="inputTask">
+        <button onclick="addTask()">Add</button>
+        
+    </div>    
+</body>
+<script>
+    function addTask(){
+
+        const inputTask = document.getElementById("inputTask")
+        const taskText = inputTask.value
+        const body = document.querySelector("body")
+
+        const p = document.createElement("p")
+        p.innerText = taskText
+        body.appendChild(p)
+        inputTask.value = ''
+    }
+
+
+</script>
+</html>
